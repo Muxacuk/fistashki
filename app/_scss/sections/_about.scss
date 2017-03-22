@@ -1,0 +1,43 @@
+.about{
+    background: black;
+    color: white;
+    padding: 33px 50px 72px;
+
+    &__video-wrap{
+        margin: auto;
+        width: 70%;
+        margin-top: 35px;
+        height: 35vw;
+    }
+    &__video{
+        width: 100%;
+        height: 100%;
+    } 
+}
+@media only screen and (max-width: 768px){
+    .about{
+        padding: 10px 10px 20px;
+
+        &__title{
+            margin: 10px;
+        }
+        &__video-wrap{
+            margin-top: 15px;
+        }
+    }
+}
+@media only screen and (max-width: 500px){
+    .about{
+        padding: 10px 10px 20px;
+
+        &__title{
+            margin: 10px;
+            font-size: 1.5em;
+        }
+        &__video-wrap{
+            width: 90%;
+            margin-top: 10px;
+            height: 45vw;
+        }
+    }
+}

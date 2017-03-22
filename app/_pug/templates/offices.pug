@@ -1,0 +1,21 @@
+section.offices
+    .office
+        .offices__top
+            h2.offices__title.title Наш 
+                span(id='cityName') московский
+                |  офис
+            span.offices__sub-text.sub-text У нас классно и уютно: большие, светлые помещения, удобные рабочие места,<br> приветливые коллеги и свежие фрукты в офисе. Мечта а не работа =)
+        .offices__carousels
+            ul.owl-carousel.offices__imgs-list.offices__imgs-list_active
+                -for(var i=10; i; i--)
+                    li.offices__imgs-item
+                        img(src="http://lorempixel.com/1920/1080/city", alt="office")
+                        .offices__imgs-cover
+            ul.owl-carousel.offices__imgs-list 
+                -for(var i=10; i; i--)
+                    li.offices__imgs-item
+                        img(src="http://lorempixel.com/1920/1080/city", alt="office")
+                        .offices__imgs-cover
+        a(href="#").offices__link КЛАССНО. А 
+            span.city МОСКОВСКИЙ
+            |  ОФИС ПОКАЖЕТЕ?

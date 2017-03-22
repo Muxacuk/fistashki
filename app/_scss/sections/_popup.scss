@@ -1,0 +1,138 @@
+.popup{
+    position: relative;
+    z-index: 1000;
+
+    &__cover{
+        position: fixed;
+        top: 0;
+        left: 0px;
+        display: flex;
+        padding: 10px 50px;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,.4);
+        z-index: 1000;
+        overflow-y: scroll;
+    }
+    &__body{
+        position: relative;
+        padding: 35px;
+        margin: auto;
+        background: white;
+        display: flex;
+        max-width: 1100px;
+
+        h2{
+            font-size: (28em / 16);
+        }
+    }
+    &__left{
+        width: 55%;
+        font-size: (18em / 16);
+
+        h2{
+            margin-top: 0px;
+        }
+        h3{
+            margin-bottom: 5px;
+            font-weight: normal;
+        }
+        ul{
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+    }
+    &__right{
+        border-left: 3px solid black;
+        padding-left: 30px;
+        width: 45%;
+
+        h2{
+            margin: 0px;
+        }
+    }
+    input, textarea{
+        font-size: (18em / 16);
+        width: 100%;
+        margin-top: 20px;
+        background-color: #f4f4f4;
+        border: none;
+        padding: 13px;
+        font-family: "Helvetica Neue Cyr", Arial;
+    }
+    textarea{
+        resize: none;
+    }
+    button{
+        background: white;
+        border: 3px solid #80ba27;
+        padding: 10px;
+        font-size: (18em / 16);
+        color: #80ba27;
+        margin-top: 17px;
+
+        &:hover{
+            background-color: #80ba27;
+            color: white;
+            cursor: pointer;
+        }
+    }
+    &__close{
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        display: flex;
+        color: black;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        &:after{
+            margin-left: 10px;
+            content: '';
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            background-image: url('../pictures/icon-close-dark.png');
+            background-size: cover;
+        }
+        &:hover{
+            color: #333;
+            text-decoration: underline;
+        }
+    }
+}
+@media only screen and (max-width: 700px){
+    .popup{
+        &__body{
+            flex-direction: column;
+            padding: 20px 20px;
+        }
+        &__left, &__right{
+            width: 100%;
+        }
+        &__right{
+            border: none;  
+            padding: 0px;
+        }
+    }
+}
+@media only screen and (max-width: 500px){
+    .popup{
+    
+        &__body{
+            flex-direction: column;
+            padding: 20px;
+        }
+        &__cover{
+            padding: 5px 5px;
+        }
+        &__left, &__right{
+            width: 100%;
+        }
+        &__right{
+            border: none;  
+            padding: 0px;
+        }
+    }
+}

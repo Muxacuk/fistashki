@@ -1,0 +1,14 @@
+footer.footer
+	span.footer__text Дизайн для этого сайта мне любезно предоставила Школа онлайн образования LoftSchool.
+	.footer__row
+		.footer__left
+			+nav('nav_footer')
+			+socials('socials_footer')
+		.footer__contacts
+			ul.contacts__list
+				each val,index in contacts
+					li.contacts__item
+						a(href=val[1]).contacts__link
+							span= val[0]
+	.footer__copy
+		span &copy; Михаил Измайлов <br> Я старался, не копируйте мой сайт пожалуйста, сверстайте себе свой.

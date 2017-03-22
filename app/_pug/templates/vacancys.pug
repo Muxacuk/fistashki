@@ -1,0 +1,17 @@
+section.vacancys
+    h2.title.vacancys__title Вакансии
+    ul.vacancys__cat-titles-list
+        -var catTitlesList = ['Fistashki Москва','Fistashki Минск','Удаленная работа'];
+        -for(var cat of catTitlesList)
+            li.vacancys__cat-titles-item
+                a(href="#" class= cat=='Fistashki Москва'? 'vacancys__cat-titles-link_active':'').vacancys__cat-titles-link=cat
+    ul.vacancys__cat-list
+        -var jobsArrs = [['Аккаунт-менеджер','Дизайнер','Digital-Producer'],['Digital-Producer','Аккаунт-менеджер','Дизайнер','Digital-Producer'],['Дизайнер','Digital-Producer','Аккаунт-менеджер']]
+        -for(var i in jobsArrs)
+            li(class= i==0? 'vacancys__cat-item_active':'').vacancys__cat-item
+                ul.vacancys__list
+                    -for(var job of jobsArrs[i])
+                        li.vacancys__item
+                            a(href="#").vacancys__link
+                                img(src="pictures/face.png", alt="vacancy")
+                                span.vacancys__job-title= job

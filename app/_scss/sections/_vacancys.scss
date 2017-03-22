@@ -1,0 +1,127 @@
+.vacancys{
+    padding: 35px 73px;
+
+    &__title{
+        margin: 0;
+    }
+    &__cat-titles-list{
+        display: flex;
+        margin: 21px 0 0;
+        padding: 0px;
+        justify-content: center;
+    }
+    &__cat-titles-item{
+        list-style: none;
+        position: relative;
+        font-size: (18em / 16);
+
+        &:not(:last-child){
+            margin-right: 5px;
+            padding-right: 12px;
+
+            &:after{
+                content: '/';
+                position: absolute;
+                right: 0;
+                bottom: 0px;
+                font-size: 1em;
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+    &__cat-titles-link{
+        color: #bfbfbf;
+
+        &_active{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+    &__cat-list{
+        margin-top: 50px;
+        padding: 0px;
+    }
+    &__cat-item{
+        list-style: none;
+        display: none;
+
+        &_active{
+            display: block;
+        }
+    }
+    &__list{
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item{
+        margin: 10px 10px;
+        width: 23%;
+        list-style: none;
+        font-weight: bold;
+        min-width: 280px;
+    }
+    &__link{
+        color: black;
+        font-size: (28em / 16);
+        display: flex;
+        align-items: flex-start;
+    }
+    &__job-title{
+        margin-left: 11px;
+        margin-top: 37px;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .vacancys{
+        padding: 20px;
+
+        &__list{
+            justify-content: space-around;
+        }
+    }
+}
+@media only screen and (max-width: 800px){
+    .vacancys{
+        padding: 15px;
+        
+        &__item{
+            width: 33%;
+            margin: 10px 0;
+        }
+        &__list{
+            justify-content: space-around;
+        }
+
+    }
+}
+@media only screen and (max-width: 400px){
+    .vacancys{
+        &__cat-titles-list{
+            text-align: center;
+        }
+        &__list{
+            flex-direction: column;
+        }
+        padding: 10px;
+        
+        &__item{
+            margin: 10px 0;
+        }
+        &__cat-titles-item{
+            
+            &:not(:last-child){
+                margin-right: 2px;
+                padding-right: 9px;
+
+                &:after{
+                    font-size: 2em;
+
+                }
+            }
+        }
+    }
+}
