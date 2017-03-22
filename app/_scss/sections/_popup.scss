@@ -1,6 +1,7 @@
 .popup{
     position: relative;
     z-index: 1000;
+    display: none;
 
     &__cover{
         position: fixed;
