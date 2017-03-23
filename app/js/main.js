@@ -18,16 +18,16 @@ $(document).ready(function(){
     slidersToggleInit();
     canvasDraw();
 
+});
     var vacancys;
     new Promise((resolve) => {
-            $.getJSON('../data/vacancys.json')
+            $.getJSON('./data/vacancys.json')
                 .done(data => {
                     vacancys = new Vacancys(data);
                     resolve(vacancys);
                 })
-                .catch(err => console.log(err));
+                .catch(err => console.log(err.responseText));
     }).then((vacancys)=>{
             console.log(vacancys);
             popupInit(vacancys);
     });
-});
