@@ -71,8 +71,9 @@ gulp.task('jsBuild', () => {
 						drop_console: true,
 						unsafe: true
 					}
-				}),*/
+				}),
 				new webpack.NoEmitOnErrorsPlugin()
+				*/
 			]
 		};
 	return gulp.src('app/js/main.js')
@@ -83,9 +84,6 @@ gulp.task('jsBuild', () => {
 			}))	
 		}))
 		.pipe(webpackStream(options,webpack))
-/*		.on('error', function handleError() {
-		      this.emit('end'); // Recover from errors
-		})*/
 		.pipe(gulp.dest('dist/js/'));
 });
 
@@ -94,6 +92,10 @@ gulp.task('imgCopy', () => {
 		.pipe(gulp.dest('dist/img/'));
 	gulp.src('app/pictures/*')
 		.pipe(gulp.dest('dist/pictures/'));
+});
+gulp.task('copyData', () => {
+	gulp.src('app/data/*')
+		.pipe(gulp.dest('dist/data/'));
 });
 
 gulp.task('watch', function(){
@@ -106,4 +108,4 @@ gulp.task('watch', function(){
 	gulp.watch('app/_pug/**/*',['pug']);
 });
 
-gulp.task('default',['server','watch','jsLibs','imgCopy', 'jsBuild']);
+gulp.task('default',['server','watch','jsLibs','imgCopy', 'copyData', 'jsBuild']);

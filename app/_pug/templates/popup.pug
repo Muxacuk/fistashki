@@ -28,11 +28,13 @@
                 h2 Тебе нравится вакансия и ты хочешь к нам?<br> Заполняй анкету и отправляй!
                 .popup__form-wrap
                 form
+                    input(type="text" name='firstName' required placeholder="Фамилия")
                     input(type="text" name='secondName' placeholder="Имя")
-                    input(type="text" name='firstName' placeholder="Фамилия")
-                    input(type="tel" name='tel' placeholder="Телефон")
-                    input(type="email" name='mail' placeholder="e-mail")
+                    input(type="text" name='firstName' required placeholder="Фамилия")
+                    input(type="tel" name='tel' required placeholder="Телефон")
+                    input(type="email" name='mail' required placeholder="e-mail")
                     textarea(name="about" rows="5" placeholder="Небольшой сопроводительный текст")
+                    input(name="key" type="hidden")
                     button(type='submit') Отправить
             a(href="#").popup__close Закрыть
                     
