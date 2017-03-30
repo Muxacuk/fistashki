@@ -8,7 +8,6 @@ $(document).ready(function(){
     //bg-video init
     $('.title-block__background-video').bgVideo();
 
-    //carousel init
     $('.owl-carousel').owlCarousel({
         loop: true,
         items: 1,
@@ -19,15 +18,14 @@ $(document).ready(function(){
     canvasDraw();
 
 });
-    var vacancys;
-    new Promise((resolve) => {
-            $.getJSON('./data/vacancys.json')
-                .done(data => {
-                    vacancys = new Vacancys(data);
-                    resolve(vacancys);
-                })
-                .catch(err => console.log(err.responseText));
-    }).then((vacancys)=>{
-            console.log(vacancys);
-            popupInit(vacancys);
-    });
+
+new Promise((resolve) => {
+        $.getJSON('./data/vacancys.json')
+            .done(data => {
+                let vacancys = new Vacancys(data);
+                resolve(vacancys);
+            })
+            .catch(err => console.log(err.responseText));
+}).then((vacancys)=>{
+        popupInit(vacancys);
+});

@@ -8,28 +8,36 @@
         top: 0;
         left: 0px;
         display: flex;
-        padding: 10px 50px;
+        padding: 50px 50px 10px;
         width: 100%;
         height: 100vh;
-        background: rgba(0,0,0,.4);
+        background: rgba(0,0,0,.6);
         z-index: 1000;
         overflow-y: scroll;
     }
     &__body{
         position: relative;
-        padding: 35px;
         margin: auto;
-        background: white;
         display: flex;
+        flex-wrap: wrap;
         max-width: 1100px;
 
         h2{
             font-size: (28em / 16);
         }
     }
+    &__top{
+        padding: 35px;
+        display: flex;
+        flex-wrap: wrap;
+        background: white;
+    }
     &__left{
+        
+        background: white;
         width: 55%;
         font-size: (18em / 16);
+        
 
         h2{
             margin-top: 0px;
@@ -44,12 +52,61 @@
         }
     }
     &__right{
+        
+        background: white;
         border-left: 3px solid black;
         padding-left: 30px;
         width: 45%;
 
         h2{
             margin: 0px;
+        }
+    }
+    &__bottom{
+        background: rgba(255,255,255,.5);
+        width: 100%;
+        display: flex;
+        padding: 10px;
+    }
+    &__share{
+        margin: auto;
+        display: flex;
+        align-items: center;
+
+        &-text{
+            margin-right: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        &-list{
+            display: flex;
+            margin: 0;
+            padding: 0;
+            font-size: .8em;
+        }
+        &-item{
+            list-style: none;
+            margin-right: 15px;
+        }
+        &-link{
+            font-size: (45em / 16);
+            line-height: 1em;
+            display: flex;
+            text-decoration: none;
+            border: 2px solid white;
+            width: 40px;
+            height: 40px;
+            color: white;
+
+            &:hover{
+                color: #ddd;
+                border-color: #ddd;
+            }
+
+            span{
+                margin: auto;
+                font-weight: bold;
+            }
         }
     }
     input, textarea{
@@ -80,10 +137,10 @@
     }
     &__close{
         position: absolute;
-        bottom: 15px;
+        top: -40px;
         right: 15px;
         display: flex;
-        color: black;
+        color: white;
         text-decoration: none;
         display: flex;
         align-items: center;
@@ -94,11 +151,11 @@
             display: block;
             width: 2rem;
             height: 2rem;
-            background-image: url('../pictures/icon-close-dark.png');
+            background-image: url('http://www.fistashki.org/frontend/images/icon-close.png');
             background-size: cover;
         }
         &:hover{
-            color: #333;
+            color: #ccc;
             text-decoration: underline;
         }
     }
@@ -107,7 +164,6 @@
     .popup{
         &__body{
             flex-direction: column;
-            padding: 20px 20px;
         }
         &__left, &__right{
             width: 100%;
@@ -123,17 +179,25 @@
     
         &__body{
             flex-direction: column;
-            padding: 20px;
         }
         &__cover{
             padding: 5px 5px;
         }
         &__left, &__right{
             width: 100%;
+            padding: 10px 0;
         }
         &__right{
             border: none;  
             padding: 0px;
+        }
+        &__close{
+            top: 10px;
+            color: black;
+
+            &:after{
+                background-image: url('../pictures/icon-close-dark.png');
+            }
         }
     }
 }
