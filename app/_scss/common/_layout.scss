@@ -166,18 +166,6 @@ a {
     display: inline-block;
   }
 }
-textarea {
-  width: 100%;
-  border: 0;
-  background: url('images/textarea-bg.png') transparent;
-  background-size: auto 3.6em;
-  color: $white;
-  font-size: 1.34em;
-  line-height: $form-line-height;
-  padding: 0;
-  outline: none;
-  resize: none;
-}
 .clearfix {
   @include clearfix();
 }

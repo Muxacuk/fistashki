@@ -1,12 +1,6 @@
 .footer {
   background: $black;
   padding: 2.2em 3em 5.5em;
-    @include media(min-width 1000px) {
-      font-size: 1.2em;
-    }
-    @include media($tablet_size) {
-      font-size: 1.2em;
-    }
     @include media($mobile) {
       font-size: 12px;
     }
@@ -67,5 +61,10 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
+  }
+}
+@media screen and (max-height: 47em) and (min-width: 768px){
+  .footer {
+      font-size: 1.2em;
   }
 }
