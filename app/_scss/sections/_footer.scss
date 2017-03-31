@@ -1,6 +1,9 @@
 .footer {
   background: $black;
   padding: 2.2em 3em 5.5em;
+    @include media(min-width 1000px) {
+      font-size: 1.2em;
+    }
     @include media($tablet_size) {
       font-size: 1.2em;
     }

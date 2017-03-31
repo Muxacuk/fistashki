@@ -11,8 +11,8 @@
   overflow-y: auto;
   padding-bottom: 5em;
   font-size: 1.2em;
-  @include media($mobile) {
-    font-size: 16px;
+  @media screen and (max-height: 47em) and (min-width: 768px){
+      font-size: 1.2em;
   }
   &.open {
     display: block;
