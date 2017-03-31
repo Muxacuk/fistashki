@@ -2,11 +2,14 @@
 html(lang="en")
     include templates/head
     body
-        main
+        include templates/nav
+        include templates/header
+        main.vacancys-wrap
             include templates/title
             include templates/vacancys
             include templates/offices
             include templates/about
             include templates/contentment
             include templates/popup
+        include templates/footer
         include templates/scripts_include

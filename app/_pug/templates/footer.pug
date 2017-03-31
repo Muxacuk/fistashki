@@ -1,14 +1,16 @@
 footer.footer
-	span.footer__text Дизайн для этого сайта мне любезно предоставила Школа онлайн образования LoftSchool.
-	.footer__row
-		.footer__left
-			+nav('nav_footer')
-			+socials('socials_footer')
-		.footer__contacts
-			ul.contacts__list
-				each val,index in contacts
-					li.contacts__item
-						a(href=val[1]).contacts__link
-							span= val[0]
-	.footer__copy
-		span &copy; Михаил Измайлов <br> Я старался, не копируйте мой сайт пожалуйста, сверстайте себе свой.
+  .container
+    .footer-logo
+      a(href='/dt')
+        img.footer-logo-image(src='http://www.fistashki.org/frontend/images/footer-logo.png', alt='')
+    .footer-contact.phone
+      | Телефон 
+      .footer-contact-value +7 (495) 637-69-67
+    .footer-contact.email
+      | E-mail    
+      .footer-contact-value
+        a(href='mailto:em@fistashki.org') em@fistashki.org
+    .footer-contact.address
+      | Адрес    
+      .footer-contact-value
+        | Москва, 3-я ул. Ямского Поля, д. 2, корп. 7 (вход через корп. 13 БЦ «Ямское Поле»)

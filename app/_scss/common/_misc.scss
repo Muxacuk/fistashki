@@ -20,10 +20,12 @@
   font-style: normal; }
 
 body{
-    font-size: 16px;
     padding: 0px;
     margin: 0;
     font-family: "Helvetica Neue Cyr";
+}
+.vacancys-wrap{ 
+    font-size: 16px;
 }
 h2{
     font-size: (28em / 16);
@@ -42,17 +44,17 @@ h2{
     font-size: (18em / 16);
 }
 @media only screen and (max-width: 800px){
-    body{
+    .vacancys-wrap{
         font-size: 14px;
     }
 }
 @media only screen and (max-width: 768px){
-    body{
+    .vacancys-wrap{
         font-size: 12px;
     }
 }
 @media only screen and (max-width: 600px){
-    body{
+    .vacancys-wrap{
         font-size: 3vmin;
     
     }
@@ -61,7 +63,7 @@ h2{
     }
 }
 @media only screen and (max-width: 400px){
-    body{
+    .vacancys-wrap{
         font-size: 3.5vmin;
     }
     br{

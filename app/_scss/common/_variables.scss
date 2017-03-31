@@ -1,0 +1,33 @@
+$font-family-helvetica-neue-cyr: 'Helvetica Neue Cyr', Helvetica, Arial, sans-serif;
+
+$primary-color:         #80ba27;
+$primary-hover:         #7bbd0c;
+$white:                 #fff;
+$black:                 #000;
+$gray:                  #9d9b9b;
+$header-bg:             rgba(0,0,0, 0);
+$menu-bg:               rgba(0,0,0, 0.8);
+$border-color:          #656565; // gray
+
+$form-line-height:      3.6em;
+$header-line-height:    5.8em;
+
+$mobile-max-width: 767px;
+
+$large_devices:   max-width 1200px;
+$min_large_devices: min-width 1201px;
+$medium_devices:  max-width 1015px;
+$tablet:          max-width 768px;
+$mobile:          max-width $mobile-max-width;
+$small_mobile:   max-width 480px;
+
+$tablet_size:   min-width $mobile-max-width max-width 1015px
+;
+
+$min_medium_devices: min-width 1016px;
+$not_mobile: min-width $mobile-max-width+1px;
+$not_small_mobile:    min-width 481px;
+
+$small_height: max-height 47em;
+
+$block-min-height: 240px;

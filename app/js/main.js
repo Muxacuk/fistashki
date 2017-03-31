@@ -3,6 +3,8 @@ import slidersToggleInit from './modules/slidersToggle';
 import canvasDraw from './modules/canvas';
 import popupInit from './modules/popup';
 import Vacancys from './modules/vacancys';
+import menuInit from './modules/main_menu';
+import burgerInit from './modules/burger';
 
 $(document).ready(function(){
     //bg-video init
@@ -16,7 +18,8 @@ $(document).ready(function(){
     tabsInit($);
     slidersToggleInit();
     canvasDraw();
-
+    menuInit();
+    burgerInit();
 });
 
 new Promise((resolve) => {

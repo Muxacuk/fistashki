@@ -1,0 +1,31 @@
+.open-main-menu {
+  &:hover, &:focus, &:active {
+    font-weight: inherit;
+    .menu-text {
+      color: $primary-color;
+    }
+    .icon-bar {
+      background-color: $primary-color;
+    }
+  }
+  .menu-text {
+    color: $white;
+  }
+  .icon-bar {
+    background-color: $white;
+  }
+  .navbar-toggle {
+    position: relative;
+    display: inline-block;
+    margin-left: .1em;
+    .icon-bar {
+      display: block;
+      width: 1em;
+      height: .15em;
+      margin-bottom: .2em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

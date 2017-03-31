@@ -1,0 +1,62 @@
+.footer {
+  background: $black;
+  padding-top: 2.2em;
+  padding-bottom: 4em;
+  .container {
+    @include clearfix;
+  }
+  &-logo {
+    @include span-columns(2);
+    &-image {
+      max-width: 100%;
+    }
+  }
+  &-contact {
+    font-size: 2.54em;
+    color: $primary-color;
+    font-weight: 600;
+    margin-top: .2em;
+    @include media($tablet_size) {
+      font-size: 3.2em;
+    }
+    &-value {
+      font-size: .5em;
+      color: $white;
+      margin-top: 0.2em;
+    }
+  }
+  .phone {
+    @include span-columns(2.5);
+  }
+  .email {
+    @include span-columns(3.1);
+    a {
+      color: inherit;
+    }
+  }
+  .address {
+    @include span-columns(4.4);
+  }
+  @include media($medium_devices) {
+    .footer-logo,
+    .phone,
+    .email,
+    .address {
+      text-align: center;
+      @include span-columns(12);
+    }
+    .footer-logo {
+      margin-bottom: 2em;
+    }
+  }
+}
+
+
+.not-found {
+  .footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+}

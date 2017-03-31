@@ -1,0 +1,21 @@
+@mixin vertically-center($position: 'relative') {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin blackout($color: rgba(0, 0, 0, .6), $position: relative) {
+  position: $position;
+  & > * {
+    z-index: 3;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%);
+    background-color: $color;
+    z-index: 1;
+  }
+}

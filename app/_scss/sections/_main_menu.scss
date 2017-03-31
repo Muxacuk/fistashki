@@ -1,0 +1,84 @@
+.main-menu {
+  height: 100%;
+  background: $menu-bg;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  display: none;
+  overflow-y: auto;
+  padding-bottom: 5em;
+  font-size: 1.2em;
+  @include media($mobile) {
+    font-size: 16px;
+  }
+  &.open {
+    display: block;
+  }
+  &-wrapper {
+    @extend .container;
+    text-align: right;
+  }
+  &-logo {
+    text-align: left;
+    line-height: $header-line-height;
+    margin-bottom: 2em;
+    @include media($mobile) {
+      font-size: 12px;
+    }
+  }
+  &-content {
+    margin-bottom: 3em;
+  }
+  &-item {
+    display: block;
+    text-align: right;
+    line-height: 1.2;
+    font-weight: 600;
+    color: $white;
+    margin-bottom: .4em;
+    @include media($tablet_size) {
+      font-size: 150%;
+    }
+    @include media($not_mobile) {
+      font-size: 200%;
+    }
+    @include media($mobile) {
+      font-size: 140%;
+    }
+    &:hover, &:active, &:focus {
+      color: $primary-color;
+    }
+  }
+  &-close {
+    font-size: .9em;
+    line-height: 1;
+    font-weight: 200;
+    color: #b5b8b8;
+    position: relative;
+    @include media($medium_devices) {
+      font-size: 18px;
+    }
+    @include media($mobile) {
+      font-size: 14px;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: #b5b8b8;
+      font-weight: 200;
+      opacity: .9;
+    }
+    &:after {
+      content: '';
+      @include size(2em);
+      background: url('images/icon-close.png') no-repeat center;
+      background-size: contain;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: .2em;
+    }
+  }
+}

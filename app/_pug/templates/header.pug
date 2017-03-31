@@ -1,1 +1,39 @@
 
+header.header
+  .container.header-inner
+    .logo-wrapper
+      a.logo-link(href='/')
+        img.header-logo.logo-fistashki(src='http://www.fistashki.org/frontend/images/logo-fistashki.png', alt='Fistashki Logo')
+    .content-wrapper
+      .contact
+        a.phone.contact-item(href='tel:+74956376967')
+          .contact-item-icon
+            .contact-item-circle.thin
+            .contact-item-circle.fat
+            .contact-item-icon-image
+          .contact-item-text
+            | 8 (495) 637-69-67
+        a.mail.contact-item(href='mailto:em@fistashki.org')
+          .contact-item-icon
+            .contact-item-circle.thin
+            .contact-item-circle.fat
+            .contact-item-icon-image
+          .contact-item-text
+            | em@fistashki.org
+        a.facebook.contact-item(href='https://www.facebook.com/Fistashki')
+          .contact-item-icon
+            .contact-item-circle.thin
+            .contact-item-circle.fat
+            .contact-item-icon-image
+      .location
+        a.location-ru(href='/') рус
+        span |
+        a.location-eng(href='/en') eng
+      .menu-wrapper
+        a.menu.open-main-menu(href='#')
+          span.menu-text
+            | Меню
+          .navbar-toggle
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar

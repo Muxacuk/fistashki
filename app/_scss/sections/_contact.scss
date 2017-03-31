@@ -1,0 +1,82 @@
+.contact-item {
+  cursor: pointer;
+  display: inline-block;
+  $contact-types: phone mail facebook;
+  &, &:hover, &:focus, &:active {
+    color: $white;
+    font-weight: 300;
+  }
+  &-icon {
+    @include size(3em);
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  &-icon-image {
+    @include size(50%);
+    display: inline-block;
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &-text {
+    background-color: $primary-color;
+    position: absolute;
+    font-size: 1.2em;
+    line-height: 1.2;
+    padding: .2em .5em;
+    transform: translateX(-50%);
+    margin-left: 1.5em;
+    display: none;
+  }
+  @each $type in $contact-types {
+    &.#{$type} &-icon-image {
+      background-image: url("images/icons/#{$type}.svg");
+    }
+    &:hover.#{$type} &-icon-image {
+      background-image: url("images/icons/#{$type}-hover.svg");
+    }
+  }
+  &:hover &{
+    &-circle {
+      opacity: 1;
+      &.thin {
+        transition: opacity 1.4s;
+      }
+      &.fat {
+        transition: opacity .7s;
+      }
+    }
+    &-text {
+      display: block;
+    }
+  }
+  &-icon-image,
+  &-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &-circle {
+    opacity: 0;
+    line-height: 1;
+    border-radius: 100%;
+    border-color: $primary-color;
+    border-style: solid;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    &.thin {
+      @include size(100%);
+      border-width: 1px;
+    }
+    &.fat {
+      @include size(80%);
+      border-width: 2px;
+    }
+  }
+}

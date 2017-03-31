@@ -1,0 +1,223 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  min-height: 480px;
+}
+body {
+  font-family: $font-family-helvetica-neue-cyr;
+  font-size: 1.78vmin;
+  font-weight: 400;
+  background-color: #fff;
+  @include media($min_large_devices) {
+    font-size: 14px;
+  }
+  @include media($not_mobile) {
+    @include media($small_height) {
+      font-size: 12px;
+    }
+  }
+  &.popup-open {
+    overflow: hidden;
+    .header-logo {
+      opacity: 0;
+    }
+  }
+}
+a {
+  color: $primary-color;
+  text-decoration: none;
+  outline: none;
+  &:hover, &:focus, &:active {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
+.wrapper-content {
+  height: 100%;
+}
+.main-content {
+  box-sizing: border-box;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  section {
+    @include media($min_medium_devices) {
+      height: 100%;
+    }
+  }
+}
+.logo-fistashki {
+  max-width: 8em;
+}
+.wrapper-main-block {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.container {
+  @include outer-container();
+  padding: 0 3em;
+  @include media($mobile) {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+.h1 {
+  font-family: $font-family-helvetica-neue-cyr;
+  font-size: 2.8em;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.block-common-header {
+  font-family: $font-family-helvetica-neue-cyr;
+  font-size: 1.6em;
+  line-height: 1.26;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.h3 {
+  font-family: $font-family-helvetica-neue-cyr;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+.data-block {
+  margin-bottom: 10px;
+}
+.data-block, .hash-tag-block {
+  font-weight: 200;
+  font-size: 1em;
+  line-height: 1.1;
+  color: $white;
+  a:hover, a:focus {
+    color: $primary-hover;
+  }
+}
+.link-light {
+  font-weight: 200;
+  text-transform: uppercase;
+  border: 1px solid $primary-color;
+  display: inline-block;
+  font-size: 1.4em;
+  line-height: 1.2;
+  padding: .8em 2em;
+  outline: none;
+  background-color: transparent;
+  border-radius:0;
+  &-back {
+    position: relative;
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+
+      border-right: 6px solid $primary-color;
+      display: block;
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &:hover, &:focus, &:active {
+    border: 3px solid #fff !important;
+    margin-top: -2px;
+    margin-bottom: -2px;
+  }
+  &:active {
+    opacity: .6;
+  }
+}
+.link-fat {
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 10px 80px 14px;
+  border: 3px solid $primary-color;
+  display: inline-block;
+  &:hover, &:focus {
+    border: 3px solid #fff;
+  }
+  &:active {
+    color: #98a682;
+    border: 3px solid #98a682;
+  }
+}
+.link-arrow {
+  position: relative;
+  &:after {
+    content: '>';
+    text-decoration: inherit;
+    font-size: inherit;
+    display: inline-block;
+  }
+}
+textarea {
+  width: 100%;
+  border: 0;
+  background: url('images/textarea-bg.png') transparent;
+  background-size: auto 3.6em;
+  color: $white;
+  font-size: 1.34em;
+  line-height: $form-line-height;
+  padding: 0;
+  outline: none;
+  resize: none;
+}
+.clearfix {
+  @include clearfix();
+}
+img {vertical-align: middle;}
+
+.element-header {
+  @extend .h1;
+  color: #000;
+  text-align: center;
+}
+.element-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+.label-required {
+  position: relative;
+  &:after {
+    content: '*';
+    font-size: inherit;
+    line-height: inherit;
+    display: inline-block;
+  }
+}
+
+.locale {
+  &-ru {
+    .location-ru {
+      color: $white !important;
+      font-weight: 200;
+    }
+  }
+  &-en {
+    .location-eng {
+      font-weight: 200;
+      color: $white !important;
+    }
+  }
+}
