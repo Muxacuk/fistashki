@@ -1,7 +1,12 @@
 .footer {
   background: $black;
-  padding-top: 2.2em;
-  padding-bottom: 4em;
+  padding: 2.2em 3em 5.5em;
+    @include media($tablet_size) {
+      font-size: 1.2em;
+    }
+    @include media($mobile) {
+      font-size: 12px;
+    }
   .container {
     @include clearfix;
   }
@@ -23,13 +28,14 @@
       font-size: .5em;
       color: $white;
       margin-top: 0.2em;
+      font-weight: 200;
     }
   }
   .phone {
     @include span-columns(2.5);
   }
   .email {
-    @include span-columns(3.1);
+    @include span-columns(3);
     a {
       color: inherit;
     }
